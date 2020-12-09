@@ -57,7 +57,7 @@
 
 ### **Spring 웹 계층**
 
-![web](C:\Users\LEE\Desktop\web.png)
+![web](https://user-images.githubusercontent.com/33548856/101644706-e062f400-3a78-11eb-88e1-66ccd54865a0.png)
 
 **Web Layer**
 
