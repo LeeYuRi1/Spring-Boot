@@ -55,6 +55,65 @@
 
 
 
+### **Spring 웹 계층**
+
+![web](C:\Users\LEE\Desktop\web.png)
+
+**Web Layer**
+
+- 흔히 사용하는 컨트롤러(@Controller)와 JSP/Freemarker 등의 뷰 템플릿 영역
+- 필터(@Filter), 인터셉터, 컨트롤러 어드바이스(@ControllerAdvice) 등 외부 요청과 응답에 대한 전반적인 영역
+
+
+
+**Service Layer**
+
+- @Service에 사용되는 서비스 영역
+- 일반적으로 Controller와 Dao의 중간 영역에서 사용
+- @Transactionl이 사용되어야 하는 영역
+
+
+
+**Repository Layer**
+
+- Database와 같이 데이터 저장소에 접근하는 영역
+
+
+
+**Dtos**
+
+- Dto(Data Transfer Object)는 계층간에 데이터 교환을 위한 객체를 이야기하며 Dtos는 이들의 영역
+
+
+
+**Domain Model**
+
+- 도메인이라 불리는 개발 대상을 모든 사람이 동일한 관점에서 이해할 수 있고 공유할 수 있도록 단순화시킨 것을 도메인 모델이라고 함
+- @Entity가 사용된 영역
+- 다만, 무조건 데이터베이스의 데이블과 관계가 있어야만 하는 것은 아님
+- VO처럼 값 객체들도 이 영역에 해당
+- 비즈니스 처리를 담당해야 하는 곳
+
+
+
+
+
+### **Bean을 주입받는 방식**
+
+- @Autowired
+- setter
+- 생성자
+
+생성자로 주입받는 방식을 권장 (@Autowired는 권장하지 않음)
+
+생성자로 Bean 객체를 받도록 하면 @Autowired와 동일한 효과를 볼 수 있음
+
+-> @RequiredArgsConstructor: final이 선언된 모든 필드를 인자값으로 하는 생성자를 롬복의  @RequiredArgsConstructor가 대신 생성해줌
+
+이점: 해당 클래스의 의존성 관계가 변경될 때마다 생성자 코드를 계속해서 수정하는 번거로움 해결
+
+
+
 
 
 출처: 스프링 부트와 AWS로 혼자 구현하는 웹 서비스 - 이동욱님

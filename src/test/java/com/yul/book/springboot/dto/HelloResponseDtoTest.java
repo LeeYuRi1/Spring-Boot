@@ -1,5 +1,6 @@
 package com.yul.book.springboot.dto;
 
+import com.yul.book.springboot.web.dto.HelloResponseDto;
 import org.junit.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
